@@ -1,0 +1,11 @@
+<h1>List of Active eWORQs</h1>
+
+{% if active_eworq_list %}
+<ul>
+    {% for eworq_request in active_eworq_list %}
+    <li><a href="/eworqapp/{{ eworq_request.eWORQ_ID }}/">{{ eworq_request.eWORQ_project }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No eWORQ requests are active.</p>
+{% endif %}
